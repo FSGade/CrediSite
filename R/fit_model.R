@@ -69,7 +69,7 @@ fit_model <- function(genotype, phenotype, model_type="regularised", cores=4, it
 
     num_b = sum(num_pos_aa)
     mu_index = rep(0, num_b)
-    aa_b = rep("", num_b)
+    # aa_b = rep("", num_b)
 
     i = 1
     j = 1
@@ -82,6 +82,12 @@ fit_model <- function(genotype, phenotype, model_type="regularised", cores=4, it
       j = j + 1
     }
 
+
+    COR_MAT = diag(22)
+    COR_MAT[1:20, 1:20] = credisite:::BLOSUM62_COR
+    colnames(COR_MAT) = c(colnames(credisite:::BLOSUM62_COR), "X", "-")
+    rownames(COR_MAT) = c(rownames(credisite:::BLOSUM62_COR), "X", "-")
+
     cor_mat = diag(num_b)
     cumsum_aa = cumsum(num_pos_aa)
     for (i in seq_along(cumsum_aa)) {
@@ -91,7 +97,7 @@ fit_model <- function(genotype, phenotype, model_type="regularised", cores=4, it
       }
       end_i = cumsum_aa[i]
       cor_mat[start_i:end_i,start_i:end_i] =
-        credisite:::BLOSUM62_COR[aa_b[start_i:end_i], aa_b[start_i:end_i]]
+        COR_MAT[aa_b[start_i:end_i], aa_b[start_i:end_i]]
     }
 
     model_code = credisite:::blosum_enhanced_code
