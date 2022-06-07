@@ -69,7 +69,7 @@ fit_model <- function(genotype, phenotype, model_type="regularised", cores=4, it
 
     num_b = sum(num_pos_aa)
     mu_index = rep(0, num_b)
-    # aa_b = rep("", num_b)
+    aa_b = rep("", num_b)
 
     i = 1
     j = 1
