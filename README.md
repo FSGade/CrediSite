@@ -1,6 +1,22 @@
 # CrediSite
 Bayesian Inference of Amino Acid Level Geno-/Phenotype Correlation in Protein Multiple Sequence Alignments
 
+# TODO:
+- [] Make .rmd documentation
+- [] Add descriptions to all elements in package
+- [x] Run SigniSite benchmark
+- [] Discuss model configuration
+- [] Add R-hat, etc. to paper?
+- [] Redo regression
+- [] Redo structure plots
+- [] Redo density plot
+- [x] Redo performance plots
+- [x] Redo standard performance runs with new data
+- [x] Transfer Docs to LaTeX template
+- [] Reread and -write paper 
+- [] Include example data
+
+
 ## Introduction
 
 ## Installation
