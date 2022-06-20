@@ -5,7 +5,11 @@ Bayesian Inference of Amino Acid Level Geno-/Phenotype Correlation in Protein Mu
 - [ ] Make .rmd documentation
 - [ ] Add descriptions to all elements in package
 - [x] Run SigniSite benchmark
-- [ ] Discuss model configuration
+- [x] Discuss model configuration
+  - [ ] Test model changes: 
+    - [ ] Separate BLOSUM and positional prior
+    - [ ] Test LKJ mix correlation matrix
+    - [ ] BLOSUM across positions
 - [ ] Add R-hat, etc. to paper?
 - [ ] Redo regression
 - [ ] Redo structure plots
