@@ -1,28 +1,6 @@
 # CrediSite
 Bayesian Inference of Amino Acid Level Geno-/Phenotype Correlation in Protein Multiple Sequence Alignments
 
-# TODO:
-- [ ] Make .rmd documentation
-- [ ] Add descriptions to all elements in package
-- [x] Run SigniSite benchmark
-- [x] Discuss model configuration
-  - [ ] Test model changes: 
-    - [ ] Separate BLOSUM and positional prior
-    - [ ] Test LKJ mix correlation matrix
-    - [ ] BLOSUM across positions
-- [ ] Add R-hat, etc. to paper?
-- [ ] Redo regression
-- [ ] Redo structure plots
-- [ ] Redo density plot
-- [x] Redo performance plots
-- [x] Redo standard performance runs with new data
-- [x] Transfer Docs to LaTeX template
-- [ ] Reread and -write paper 
-- [ ] Include example data
-
-
-## Introduction
-
 ## Installation
 This package requires rstan (follow the instructions for installation [here](https://github.com/stan-dev/rstan/wiki/RStan-Getting-Started)).
 
@@ -31,7 +9,7 @@ Afterwards, installation of CrediSite can be done using devtools:
 devtools::install_github("FSGade/CrediSite")
 ```
 
-## Tutorial
+## Usage
 ``` r
 input_data <- credisite::msa_to_model_data("msa/ATV.msa",
                                    consensus = "PQITLWQRPLVTIKIGGQLKEALLDTGADDTVLEEMNLPGRWKPKMIGGIGGFIKVRQYDQILIEICGHKAIGTVLVGPTPVNIIGRNLLTQIGCTLNF",
